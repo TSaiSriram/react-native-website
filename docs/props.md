@@ -9,7 +9,7 @@ For example, one basic React Native component is the `Image`. When you create an
 
 ```ReactNativeWebPlayer
 import React, { Component } from 'react';
-import { AppRegistry, Image } from 'react-native';
+import { AppRegistry, Image, View } from 'react-native';
 
 export default class Bananas extends Component {
   render() {
@@ -17,10 +17,15 @@ export default class Bananas extends Component {
       uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
     };
     return (
-      <Image source={pic} style={{width: 193, height: 110}}/>
+     <View>
+      <Image source={pic} style={{ flex :0.2,  alignItems: "center", width: 193, height: 110}}/>
+      </View>
     );
   }
 }
+
+// skip this line if using Create React Native App
+AppRegistry.registerComponent('AwesomeProject', () => Bananas);
 
 // skip this line if using Create React Native App
 AppRegistry.registerComponent('AwesomeProject', () => Bananas);
